@@ -29,8 +29,8 @@ namespace FINT.Model.Resource.Test
       var names = deserializedContent.ConvertAll(p => p.Name);
 
       Assert.Equal(2, deserializedContent.Count);
-      Assert.True(names.Contains("test1"));
-      Assert.True(names.Contains("test2"));
+      Assert.Contains("test1", names);
+      Assert.Contains("test2", names);
     }
 
   }

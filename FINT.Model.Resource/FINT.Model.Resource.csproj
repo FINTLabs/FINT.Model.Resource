@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
-    <ReleaseVersion>1.0.1</ReleaseVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ReleaseVersion>2.0.0</ReleaseVersion>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>FINT.Model.Resource</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
-    <Company>Vigo IKS</Company>
+    <PackageVersion>2.0.0</PackageVersion>
+    <Company>Novari IKS</Company>
     <Authors>FINTLabs</Authors>
     <Description>FINT Resource Model contains the core classes for FINT data models containing HATEOAS relations</Description>
     <SynchReleaseVersion>true</SynchReleaseVersion>
