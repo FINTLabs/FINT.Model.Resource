@@ -20,10 +20,9 @@ jobs:
           VERSION=${TAG_NAME:1}
           echo Version is $VERSION
           dotnet msbuild -t:restore,build,pack -p:Configuration=Release -p:Version=$VERSION -p:PackageVersion=$VERSION FINT.Model.Resource.sln
-
         env: 
           TAG_NAME: ${{github.event.release.tag_name}}
 
       - name: Publish new release to NuGet
         run: |
-          dotnet nuget push FINT.Model.Resource/bin/Release/FINT.Model.Resource.*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
+          dotnet nuget push FINT.Model.Resource/bin/Release/FINT.Model.Resource.*.nupkg --api-key ${{secrets.NUGET_KEY}} --source "https://api.nuget.org/v3/index.json"
